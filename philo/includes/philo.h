@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:47:49 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/06/27 15:55:25 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/01 19:27:55 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,20 @@
 # define VALID 0
 # define INVALID 1
 
+# define FREE 0
+# define TAKEN 1
+
 /*
 ** STRUCTURE
 */
 
 typedef struct s_philo
 {
-	int	id;
+	int				id;
+	pthread_t		pthread;
+	int				fork;
+	int				fork_taken_by;
+	pthread_mutex_t	m_fork;
 }	t_philo;
 
 typedef struct s_data
@@ -51,6 +58,11 @@ typedef struct s_data
 	int			time_to_sleep;
 	int			times_must_eat;
 	t_philo		*philo;
+	int			flag;
+	pthread_mutex_t	m_flag;
+	int			total_finished;
+	pthread_mutex_t	m_total_finished;
+	pthread_mutex_t	m_write;
 }	t_data;
 
 /*
@@ -58,6 +70,8 @@ typedef struct s_data
 */
 
 int		init_data(t_data *data, int argc, char **argv);
+int		init_mutex(t_data *data);
+int		init_philo(t_data *data);
 
 int		ft_atoi(const char *str);
 int		ft_isdigit(int c);

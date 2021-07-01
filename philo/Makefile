@@ -6,7 +6,7 @@
 #    By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/11 17:55:08 by kefujiwa          #+#    #+#              #
-#    Updated: 2021/06/27 16:03:40 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/07/01 19:30:03 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,15 @@ RM					= rm -rf
 HEADER_DIR			= includes/
 SRCS_DIR			= srcs/
 OBJS_DIR			= objs/
+INIT_DIR			= init/
 UTILS_DIR			= utils/
 
 # Files #
+INIT				= init_data.c \
+					  init_mutex.c \
+					  init_philo.c
+INIT_SRCS			= $(addprefix $(INIT_DIR), $(INIT))
+
 UTILS				= ft_atoi.c \
 					  ft_isdigit.c \
 					  ft_isspace.c \
@@ -77,7 +83,7 @@ UTILS				= ft_atoi.c \
 UTILS_SRCS			= $(addprefix $(UTILS_DIR), $(UTILS))
 
 SRCS				= main.c \
-					  init_data.c \
+					  $(INIT_SRCS) \
 					  $(UTILS_SRCS)
 
 # Compiled Files #
@@ -119,6 +125,7 @@ $(OBJS_DIR)%.o: 	$(SRCS_DIR)%.c
 
 $(OBJS_DIR):
 					@mkdir -p $(OBJS_DIR)
+					@mkdir -p $(OBJS_DIR)$(INIT_DIR)
 					@mkdir -p $(OBJS_DIR)$(UTILS_DIR)
 
 # Phony #

@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 00:53:51 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/06/27 15:26:59 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/01 19:30:27 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,7 @@ int	init_data(t_data *data, int argc, char **argv)
 		data->times_must_eat = ft_atoi(argv[5]);
 	else
 		data->times_must_eat = -1;
+	data->flag = 0;
+	data->total_finished = 0;
 	return (VALID);
 }
