@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:47:49 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/01 19:27:55 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:37:43 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,9 @@ typedef struct s_data
 ** PROTOTYPE DECLARATION
 */
 
+void	clear_data(t_data *data);
+int		puterr_and_return(const char *str);
+
 int		init_data(t_data *data, int argc, char **argv);
 int		init_mutex(t_data *data);
 int		init_philo(t_data *data);
@@ -83,6 +86,5 @@ void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
-int		puterr_and_return(const char *str);
 
 #endif

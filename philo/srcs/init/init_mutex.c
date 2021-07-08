@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:46:37 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/01 19:31:46 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:32:45 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int	init_mutex_philo(t_data *data)
 				pthread_mutex_destroy(&(--tmp)->m_fork);
 			return (INVALID);
 		}
+		tmp++;
 	}
 	return (VALID);
 }

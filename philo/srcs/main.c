@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:46:37 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/04 22:17:17 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:19:51 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,6 @@ int	main(int argc, char **argv)
 	}
 	i = 0;
 	start_activity(&data);
+	clear_data(&data);
+	return (EXIT_SUCCESS);
 }
