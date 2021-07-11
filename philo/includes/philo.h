@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:47:49 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/08 09:37:43 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/10 22:49:44 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,15 @@ typedef struct s_philo
 
 typedef struct s_data
 {
-	int			total;
-	int			time_to_die;
-	int			time_to_eat;
-	int			time_to_sleep;
-	int			times_must_eat;
-	t_philo		*philo;
-	int			flag;
+	int				total;
+	int				time_to_die;
+	int				time_to_eat;
+	int				time_to_sleep;
+	int				times_must_eat;
+	t_philo			*philo;
+	int				flag;
 	pthread_mutex_t	m_flag;
-	int			total_finished;
+	int				total_finished;
 	pthread_mutex_t	m_total_finished;
 	pthread_mutex_t	m_write;
 }	t_data;
