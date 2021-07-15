@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:47:49 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/10 22:49:44 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/15 16:25:57 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ typedef struct s_data
 
 void	clear_data(t_data *data);
 int		puterr_and_return(const char *str);
+void	*do_activity(void *d);
+long	get_timestamp(void);
 
 int		init_data(t_data *data, int argc, char **argv);
 int		init_mutex(t_data *data);
