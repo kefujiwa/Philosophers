@@ -6,7 +6,7 @@
 #    By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/11 17:55:08 by kefujiwa          #+#    #+#              #
-#    Updated: 2021/07/01 19:30:03 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/07/16 23:17:50 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,11 +78,12 @@ UTILS				= ft_atoi.c \
 					  ft_putstr_fd.c \
 					  ft_strlcat.c \
 					  ft_strlcpy.c \
-					  ft_strlen.c \
-					  puterr_and_return.c
+					  ft_strlen.c
 UTILS_SRCS			= $(addprefix $(UTILS_DIR), $(UTILS))
 
 SRCS				= main.c \
+					  clear_data.c \
+					  puterr_and_return.c \
 					  $(INIT_SRCS) \
 					  $(UTILS_SRCS)
 
