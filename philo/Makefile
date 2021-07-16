@@ -6,7 +6,7 @@
 #    By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/11 17:55:08 by kefujiwa          #+#    #+#              #
-#    Updated: 2021/07/16 23:17:50 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/07/16 23:19:01 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,7 @@ UTILS_SRCS			= $(addprefix $(UTILS_DIR), $(UTILS))
 
 SRCS				= main.c \
 					  clear_data.c \
+					  get_timestamp.c \
 					  puterr_and_return.c \
 					  $(INIT_SRCS) \
 					  $(UTILS_SRCS)
