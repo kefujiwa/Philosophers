@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 19:46:37 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/07/08 09:39:38 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/07/17 15:49:27 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	start_activity(t_data *data)
 	tmp = data->philo;
 	while (index++ < data->total)
 	{
-		pthread_create(&tmp->pthread, NULL, do_activity, data);
+		pthread_create(&tmp->pthread, NULL, activate_philo, tmp);
 		tmp++;
 	}
 	index = 0;
